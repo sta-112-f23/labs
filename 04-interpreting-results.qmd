@@ -1,0 +1,67 @@
+---
+title: "Lab 04 - Math Enrollment"
+subtitle: "Interpreting Results"
+date: "2023-10-09"
+format: 
+  html:
+    self-contained: true
+    theme:
+      - flatly
+      - lab.scss
+---
+
+**Due:** 2023-10-17 at 11:59p
+**Turn in the .html file on Canvas**
+
+# Getting started
+
+Go to RStudio Pro and click:
+
+**Step 1**. File \> New Project\
+**Step 2**. "Version Control"\
+**Step 3**. Git\
+**Step 4**. Copy the following into the "Repository URL":
+
+```{bash}
+#| eval: false
+https://github.com/sta-112-f23/lab-04-interpreting-results.git
+```
+
+# Exercises
+
+Total enrollments in mathematics courses at a small liberal arts college were obtained for each semester from Fall 2001 to Spring 2012. The academic year at this school consists of two semesters, with enrollment counts for `Fall` and `Spring` each year. The variable `AYear` indicates the year at the beginning of the academic year. The data is in the **Stat2Data** package. The dataset is called `MathEnrollment`. 
+
+Be sure to load the proper packages and the dataset before you begin. 
+
+```{r, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(Stat2Data)
+data("MathEnrollment")
+```
+
+1. Fit a simple linear regression predicting `Spring` enrollment from `Fall` in the `MathEnrollment` data set. We are interested in interpreting the coefficients for the slope and intercept, drawing inference (that is examining the confidence intervals) and making predictions for new observations using this model. What are the assumptions needed in order to do this?
+
+2. Check that the assumptions listed in Exercise 1 are met by this model. 
+
+3. Report the intercept and slope of the model fit in Exercise 1. Interpret these results.
+
+4. Find the **F-statistic** and it's associated **p-value** as well as the **coefficient of determination** for the model fit in Exercise 1. Interpret these results.
+
+5. There is some discussion in the department that the data point for 2003 is an "influential" point. Create a new dataset filtering out when `AYear` is 2003. Refit a simple linear regression model predicting `Spring` enrollment from `Fall` in this filtered dataset. Do you think 2003 is influential?
+
+6. For the model fit in Exercise 5, what percent of the variability in spring enrollment is explained by using a simple linear model with fall enrollment as the predictor? How does this compare to the model fit in Exercise 1?
+
+7. Provide the ANOVA table for partitioning the total variability in spring enrollment based on this model using the `anova()` function. Using the components of this table, calculate the Total Sum of Squares.
+
+8. Provide a 95% confidence interval for the slope of the model fit in Exercise 5. Does this interval include 0? Interpret this result.
+
+9. Using the model fit in Exercise 5, what would you predict the spring enrollment to be when the fall enrollment is 290?
+
+10. Provide a 95% confidence interval for average spring enrollment when the fall enrollment is 290.
+
+11. Provide a 95% **prediction interval** for spring enrollment when the fall enrollment is 290.
+
+12. A new administrator at the college wants to know what interval she should use to predict the enrollment next spring when the enrollment next fall is 290. Would you recommend that she use your interval from Exercise 10 or the interval from Exercise 11? Explain.
+
+
+
