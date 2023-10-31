@@ -8,7 +8,7 @@ format:
       - lab.scss
 ---
 
-**Due:** 2022-10-31 at 11:59pm
+**Due:** 2023-10-31 at 11:59pm
 **Turn your .html file in on Canvas**
 
 # Getting started
@@ -56,6 +56,6 @@ The `Diamonds` data set can be used to examine the relationship between a diamon
 
 5. Examine $R^2$ and adjusted $R^2$ for each model (1, 2, and 3). Use this metric to select your final prediction model. Which did you select? Why did you select this model? What is the equation for this prediction model?
 
-6. A diamond sales person has a shipment of 1 carat diamonds with a depth of 60 and. They want to know what the average total price will be for these diamonds. Report this value along with an appropriate confidence interval.
+6. A diamond sales person has a shipment of 1 carat diamonds with a depth of 60. They want to know what the average total price will be for these diamonds. Report this value along with an appropriate confidence interval.
 
 7. Your relative has a 1 carat diamond with a depth of 59.7 -- they want to know what you would predict the total price for this diamond would be. Report this value along with the appropriate confidence interval.
